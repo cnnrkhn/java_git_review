@@ -1,5 +1,25 @@
+/**
+ *  Controls a game.
+ *
+ *  @author Connor Khin
+ *  @version 1/28/23
+ */
 public abstract class Game {
-    public abstract void getInput();
     
-    public abstract void printScreen();
+    /**
+     *  Takes input for the game.
+     */ 
+    public abstract void input();
+   
+    /**
+    *   Plays a turn in the game.
+    *
+    *   @return boolean returns true if the gmae should continue running
+    */ 
+    public abstract boolean playTurn();
+ 
+    /**
+     *  Outputs the game state.
+     */ 
+    public abstract void output();
 }
