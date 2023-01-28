@@ -1,5 +1,5 @@
 public abstract class Game {
-    public abstract void getInput();
+    public abstract void input();
     
-    public abstract void printScreen();
+    public abstract boolean output();
 }
