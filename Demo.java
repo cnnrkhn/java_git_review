@@ -1,9 +1,10 @@
+import java.util.Scanner
+
 /**
  *  Does something
  *  @author Connor Khin
  *  @version 1/27/23
  */
-import java.util.Scanner
 public class Demo {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in)
@@ -31,17 +32,17 @@ public class Demo {
         Game game;
         if(c == 'y') {
             System.out.println("Good, let's play hangman.")
-            game = new hangman();
+            game = new Hangman();
         }else {
             System.out.println("Ok, here's some work to do instead.");
-            game = new addition();
+            game = new Addition();
         }
 
         boolean unfinished = true;
-        game.output();
         while(unfinished) {
+            game.output();
             game.input();
-            unfinished = game.output();
+            unfinished = game.playTurn();
         }
     }
 }
