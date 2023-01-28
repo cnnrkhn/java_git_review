@@ -14,7 +14,7 @@ public abstract class Game {
     /**
     *   Plays a turn in the game.
     *
-    *   @return boolean returns whether or not the gmae should continue running
+    *   @return boolean returns true if the gmae should continue running
     */ 
     public abstract boolean playTurn();
  

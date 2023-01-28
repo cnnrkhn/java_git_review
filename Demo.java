@@ -27,7 +27,7 @@ public class Demo {
                 default:
                     System.out.println("Please respond with yes or no.");
             }
-        }while(validAns);
+        }while(invalidAns);
 
         Game game;
         if(c == 'y') {
