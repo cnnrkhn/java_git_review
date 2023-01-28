@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
-import java.util.InputMismatchExceeption;
+import java.util.InputMismatchException;
 
 /**
  *  Plays an addition game
@@ -17,13 +17,13 @@ public class Addition extends Game {
         System.out.println("Enter the sums until you get one wrong.");
     }
 
-    @override
+    // @override
     public void input() {
         Scanner kb = new Scanner(System.in);
         boolean invalid = true;
         while(invalid) {
             try {
-                ans = kb.nextInt()
+                ans = kb.nextInt();
                 invalid = false;
             }catch(InputMismatchException e) {
                 System.out.println("That is not a number.");
@@ -32,7 +32,7 @@ public class Addition extends Game {
         }
     }
 
-    @override
+    // @override
     public boolean playTurn() {
         boolean check = a + b == ans;
         if(!check) {
@@ -41,11 +41,11 @@ public class Addition extends Game {
         return check;
     }
 
-    @override
+    // @override
     public void output() {
         Random r = new Random();
-        a = r.nextInt(); 
-        b = r.nextInt();
+        a = r.nextInt(100); 
+        b = r.nextInt(100);
         System.out.printf("What is %d + %d = ", a, b); 
     }
 }

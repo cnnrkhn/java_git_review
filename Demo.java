@@ -1,4 +1,4 @@
-import java.util.Scanner
+import java.util.Scanner;
 
 /**
  *  Does something
@@ -7,31 +7,31 @@ import java.util.Scanner
  */
 public class Demo {
     public static void main(String[] args) {
-        Scanner kb = new Scanner(System.in)
+        Scanner kb = new Scanner(System.in);
         String response;
         char c;
         boolean invalidAns = true;
 
         do{
             System.out.println("Would you like to play a game? (y/n)");
-            reponse = kb.nextLine();
-            c = response.charAt(0)
+            response = kb.nextLine();
+            c = response.charAt(0);
             switch(c) {
-                case y:
-                case Y:
+                case 'y':
+                case 'Y':
                     c = 'y';
-                case n:
-                case N:
+                case 'n':
+                case 'N':
                     invalidAns = false;
                     break;
                 default:
                     System.out.println("Please respond with yes or no.");
             }
-        }while(validAns)
+        }while(validAns);
 
         Game game;
         if(c == 'y') {
-            System.out.println("Good, let's play hangman.")
+            System.out.println("Good, let's play hangman.");
             game = new Hangman();
         }else {
             System.out.println("Ok, here's some work to do instead.");
