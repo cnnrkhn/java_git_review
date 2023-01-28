@@ -27,6 +27,7 @@ public class Addition extends Game {
                 invalid = false;
             }catch(InputMismatchException e) {
                 System.out.println("That is not a number.");
+                kb.nextLine();
                 System.out.printf("What is %d + %d = ", a, b);
             }
         }
